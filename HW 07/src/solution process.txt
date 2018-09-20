@@ -1,0 +1,12 @@
+Alex Swindle
+aswindle
+CSCV 335
+Homework 7
+
+The first step I took in debugging the program was just looking through the files and seeing what the various pieces looked like.
+
+My first pass was correcting naming conventions, capitalizing class names and making method names camelCased.
+
+After that I worked on actual functionality, which was mostly just identifying the bugs in the main bubbleSort method. The governing while loop seemed off, and after initially discarding the boolean entirely I understood its purpose after researching Bubble Sort for my 345 VoiceThread slide. However, bHasExchanged has to be reset every single loop or else it would end after any 2 elements were swapped, so I added a line setting it to false at the start of each run and also changed the while loop to be while(an exchange happened on the last pass), which is the opposite of how it was originally written.
+
+I did a few other small fixes like checking that the signs in Ascending and DescendingSort were correct, and the last major change I made was renaming the various uses of 'first' and 'second' to 'firstIndex' or 'firstElement' and 'secondIndex' or 'secondElement' depending on whether the parameter was an index of an array or an actual element of an array, since the ambiguity was confusing.

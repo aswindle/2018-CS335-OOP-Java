@@ -1,0 +1,5 @@
+1000:voltaire:francois:writing:27.00:40
+1100:austen:jane:writing:25.00:50
+1200:montaigne:michel:phil:24.50:40
+1300:du chatelet:emilie:math:30.00:60
+1400:goethe:johann:writing:24.50:40

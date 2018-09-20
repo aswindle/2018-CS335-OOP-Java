@@ -1,0 +1,14 @@
+Alex Swindle
+aswindle@email.arizona.edu
+
+HW 01 Questions
+
+*Used the BufferedDemo class as a guide for creating/using the 
+buffered reader and writer objects
+*Also used it as a guide for updating inputLine within the while loop check
+
+Researched online:
+*Double.parseDouble()
+*String array .length as opposed to .length()
+*Creating instance of class to allow non-static methods within main()
+*String.format() syntax
