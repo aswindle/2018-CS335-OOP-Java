@@ -1,0 +1,52 @@
+Things that need doing:
+
+GUI:
+  TextField to get player's name needs to be placed somewhere, and the button to start the game needs to get the field.
+  
+  DEBUG UI:  "Set Card" button needs to get wired up to get the card slot from the rbSlotx radiobuttons (see comments in relevant code section).
+              
+
+	Buttons needed: 
+	  -Start button needs to create the game object after verifying that the player has typed something in (not an empty string) to the tfGetPlayerName textfield.
+	  
+		-Cards; only need to be clickable during the selection scene described below; might just work as labels in the main scene
+		
+		-Miscellaneous actions during turn:
+			-Sell
+			-Equip item
+			-Change Race
+			-Change Class
+
+		-Die; only needed in Combat run away scene I think?
+
+	Scenes needed:
+		-Main display
+		
+		-Reusable scene that asks the user to pick n cards from either their Door or Treasure hands, returns them as an ArrayList<Card>; probably needs to have a confirmation button of some kind
+			Used for:
+				Combat: equipping any items
+				Combat: discarding cards for bonuses
+				Combat: discarding all for Wizard spell; probably better just to be a single button "Discard All"
+				Game: selecting a monster for "Look for Trouble"
+				Game: selecting 1 or 2 treasures for curses 1 and 2
+				Game: select a new race for curse 5; special case, can use a list of 3 Race cards instead of Door or Treasure hands
+				Game: selling cards for a level
+				Game: discard phase
+				
+		-Combat
+			-Pre-fight
+			-Runaway rolling/rerolling
+
+	-Feedback field to describe what's going on in the game at any moment
+
+	-Hook up buttons to methods
+		Possibly incorporate the Game file into the JavaFX file so all of the pieces are accessible to the GUI?
+
+Code:
+	Combat:
+		-Equipping items before fighting; maybe it should be separated out into Game class?
+		-I think I did the discarding for bonus stuff right, but in the wrong spot. Maybe it needs to be separated out into a separate method?
+		-Wizard needs to be able to choose from options
+
+	Game:
+		-Adding in the text for the feedback field as comments in the appropriate sections so we know what to display in the GUI
